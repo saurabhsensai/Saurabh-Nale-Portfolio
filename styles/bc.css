@@ -1,0 +1,91 @@
+/* Apply this to the body or main container */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #2c1a23, #3b1f2e, #5a2e38, #2c1a1f);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    overflow: auto; /* Prevent scrollbars from appearing */
+    color: #f0f0f0; /* Light text color for contrast */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Animated Gradient */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+      background-color: #ff7f50; /* Warm coral */
+    }
+    25% {
+      background-position: 50% 50%;
+      background-color: #ff6347; /* Deep sunset orange */
+    }
+    50% {
+      background-position: 100% 50%;
+      background-color: #a4508b; /* Muted magenta */
+    }
+    75% {
+      background-position: 50% 50%;
+      background-color: #5c2b33; /* Deep, earthy plum */
+    }
+    100% {
+      background-position: 0% 50%;
+      background-color: #ff7f50; /* Back to warm coral */
+    }
+  }
+  
+  /* Blurred Animated Dots */
+  .dot {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 99, 71, 0.6); /* Sunset orange */
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: moveDots 10s ease infinite;
+    opacity: 0.8;
+  }
+  
+  .dot:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    background: rgba(255, 127, 80, 0.6); /* Coral */
+    animation-duration: 25s;
+  }
+  
+  .dot:nth-child(2) {
+    top: 40%;
+    left: 70%;
+    background: rgba(164, 80, 139, 0.5); /* Magenta */
+    animation-duration: 10s;
+  }
+  
+  .dot:nth-child(3) {
+    top: 75%;
+    left: 35%;
+    background: rgba(92, 43, 51, 0.5); /* Deep plum */
+    animation-duration: 15s;
+  }
+  
+  .dot:nth-child(4) {
+    top: 80%;
+    left: 50%;
+    background: rgba(255, 159, 130, 0.5); /* Soft peach */
+    animation-duration: 18s;
+  }
+  
+  /* Dots Movement */
+  @keyframes moveDots {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(150px, 150px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  

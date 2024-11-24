@@ -1,0 +1,99 @@
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  font-family: "Albert Sans", sans-serif;
+
+  @apply text-neutral-900 bg-neutral-50 dark:text-neutral-50 dark:bg-neutral-900;
+  @apply text-xs sm:text-sm;
+
+  
+}
+
+.gradient-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #2c1a23, #3b1f2e, #5a2e38, #2c1a1f);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+    background-color: #ff7f50;
+  }
+  25% {
+    background-position: 50% 50%;
+    background-color: #ff6347;
+  }
+  50% {
+    background-position: 100% 50%;
+    background-color: #a4508b;
+  }
+  75% {
+    background-position: 50% 50%;
+    background-color: #5c2b33;
+  }
+  100% {
+    background-position: 0% 50%;
+    background-color: #ff7f50;
+  }
+}
+
+.dot {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: moveDots 10s ease infinite;
+  opacity: 0.8;
+}
+
+.dot:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  background: rgba(255, 127, 80, 0.6);
+  animation-duration: 25s;
+}
+
+.dot:nth-child(2) {
+  top: 40%;
+  left: 70%;
+  background: rgba(164, 80, 139, 0.5);
+  animation-duration: 10s;
+}
+
+.dot:nth-child(3) {
+  top: 75%;
+  left: 35%;
+  background: rgba(92, 43, 51, 0.5);
+  animation-duration: 15s;
+}
+
+.dot:nth-child(4) {
+  top: 80%;
+  left: 50%;
+  background: rgba(255, 159, 130, 0.5);
+  animation-duration: 18s;
+}
+
+@keyframes moveDots {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(150px, 150px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
