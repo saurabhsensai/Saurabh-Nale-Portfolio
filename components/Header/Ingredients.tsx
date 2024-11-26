@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 const Ingredients = () => (
   <code className="h-[115px] text-center leading-loose">
     <Typewriter
-      options={{ delay: 40 }}
+      options={{ delay: 20 }}
       onInit={(typewriter) => {
        
         typewriter
