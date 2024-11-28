@@ -6,7 +6,7 @@ const links = {
   dribbble: "https://pillai.xyz/dribbble",
   dev: "https://dev.com",
   facebook: "https://facebook.com",
-  resume: "https://drive.google.com/file/d/1JfZiy9ZZ2Zbd42znUxSpsjc4g6OiGrWR/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1yImtZ1R2CQ5TW-R04DkNu6YCSQrp7blG/view?usp=sharing",
 
 };
 
